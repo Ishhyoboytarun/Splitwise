@@ -106,3 +106,32 @@
 
 
 ## Relationship among tables
+
+1. User Table:
+   - No direct relationships with other tables.
+
+2. Expense Table:
+   - One-to-Many relationship with User Table (payer_id references User.id).
+   - One-to-Many relationship with Participant Table (Expense.id references Participant.expense_id).
+
+3. Participant Table:
+   - Many-to-One relationship with Expense Table (expense_id references Expense.id).
+   - Many-to-One relationship with User Table (user_id references User.id).
+
+4. Settlement Table:
+   - Many-to-One relationship with User Table (payer_id references User.id).
+   - Many-to-One relationship with User Table (receiver_id references User.id).
+
+5. Group Table:
+   - No direct relationships with other tables.
+
+6. GroupMember Table:
+   - Many-to-One relationship with Group Table (group_id references Group.id).
+   - Many-to-One relationship with User Table (user_id references User.id).
+
+7. GroupExpense Table:
+   - Many-to-One relationship with Group Table (group_id references Group.id).
+   - Many-to-One relationship with Expense Table (expense_id references Expense.id).
+
+8. Currency Table:
+   - No direct relationships with other tables.
