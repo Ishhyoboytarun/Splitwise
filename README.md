@@ -1,6 +1,6 @@
 # Splitwise
 
-## Requirements 
+## Requirements with Entities defined
 ```
 ┌──────────────────────────────────────────┐
 │           Splitwise Requirements          │
