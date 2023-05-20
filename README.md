@@ -46,4 +46,63 @@
 
 ## Tables Involved
 
+1. User Table:
+   - id (Primary Key)
+   - username
+   - password
+   - email
+   - profile_info
+   - created_at
+   - updated_at
 
+2. Expense Table:
+   - id (Primary Key)
+   - amount
+   - description
+   - payer_id (Foreign Key referencing User.id)
+   - created_at
+   - updated_at
+
+3. Participant Table:
+   - id (Primary Key)
+   - expense_id (Foreign Key referencing Expense.id)
+   - user_id (Foreign Key referencing User.id)
+   - share_amount
+   - created_at
+   - updated_at
+
+4. Settlement Table:
+   - id (Primary Key)
+   - payer_id (Foreign Key referencing User.id)
+   - receiver_id (Foreign Key referencing User.id)
+   - amount
+   - created_at
+   - updated_at
+
+5. Group Table:
+   - id (Primary Key)
+   - name
+   - created_at
+   - updated_at
+
+6. GroupMember Table:
+   - id (Primary Key)
+   - group_id (Foreign Key referencing Group.id)
+   - user_id (Foreign Key referencing User.id)
+   - created_at
+   - updated_at
+
+7. GroupExpense Table:
+   - id (Primary Key)
+   - group_id (Foreign Key referencing Group.id)
+   - expense_id (Foreign Key referencing Expense.id)
+   - created_at
+   - updated_at
+
+8. Currency Table:
+   - id (Primary Key)
+   - code
+   - name
+
+
+## Relationship among tables
