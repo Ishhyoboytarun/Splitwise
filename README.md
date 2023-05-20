@@ -135,3 +135,42 @@
 
 8. Currency Table:
    - No direct relationships with other tables.
+
+
+## Classes involved
+
+1. User:
+   - Responsible for user management and authentication.
+   - Attributes: id, username, password, email, profileInfo, createdAt, updatedAt.
+   - Methods: register(), login(), updateProfile(), ...
+
+2. Expense:
+   - Represents an individual expense.
+   - Attributes: id, amount, description, payer (User), participants (User[]), createdAt, updatedAt.
+   - Methods: createExpense(), addParticipant(), calculateBalances(), ...
+
+3. Group:
+   - Manages groups and shared expenses.
+   - Attributes: id, name, members (User[]), expenses (Expense[]), createdAt, updatedAt.
+   - Methods: createGroup(), addMember(), shareExpense(), ...
+
+4. Payment:
+   - Handles expense settlement between users.
+   - Attributes: payer (User), receiver (User), amount, createdAt, updatedAt.
+   - Methods: settleDebts(), calculateBalances(), ...
+
+5. CurrencyConverter:
+   - Performs currency conversions.
+   - Methods: convert(), getExchangeRate(), ...
+
+6. ExpenseTracker:
+   - Tracks personal expenses and provides spending analysis.
+   - Methods: viewPersonalExpenses(), trackSpending(), filterExpenses(), ...
+
+7. NotificationService:
+   - Handles real-time or delayed notifications.
+   - Methods: sendNotification(), subscribeToActivity(), ...
+
+8. Database:
+   - Manages the persistence and retrieval of data.
+   - Methods: saveUser(), getUser(), saveExpense(), getExpense(), ...
