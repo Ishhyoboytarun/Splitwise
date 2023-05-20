@@ -1,5 +1,6 @@
 # Splitwise
 
+
 ## Requirements with Entities defined
 ```
 ┌──────────────────────────────────────────┐
@@ -42,6 +43,7 @@
 │    - Privacy settings for expenses       │
 ├──────────────────────────────────────────┤
 ```
+
 
 
 ## Tables Involved
@@ -105,6 +107,7 @@
    - name
 
 
+
 ## Relationship among tables
 
 1. User Table:
@@ -135,6 +138,7 @@
 
 8. Currency Table:
    - No direct relationships with other tables.
+
 
 
 ## Classes involved
